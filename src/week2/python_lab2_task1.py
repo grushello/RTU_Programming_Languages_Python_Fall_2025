@@ -16,14 +16,22 @@ Instructions:
 """
 
 # TODO: Create the datasets - up to you to fill in the data
-temperatures = []
-city_population = {}
+temperatures = [20.0, 16.0, 27.0, 32.0, 30.3]
+city_population = {"Riga" : 591882, "Tokyo": 14250000,
+                  "Amsterdam": 1160000, "New York" : 8478000,
+                  "London" : 9100000}
 
 # TODO: Compute aggregates
-average_temperature = 0
+average_temperature = sum(temperatures) / len(temperatures)
 largest_city = ""
 largest_population = 0
 total_population = 0
+
+for city, population in city_population.items():
+    total_population += population
+    if population > largest_population:
+        largest_population = population
+        largest_city = city
 
 # TODO: Print results
 print("Average temperature:", average_temperature)

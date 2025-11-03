@@ -1,4 +1,3 @@
-
 """
 Lab 3.3 – Operator Frequency Counter
 
@@ -18,14 +17,11 @@ Instructions:
 expression = input("Enter an arithmetic expression: ")
 
 # Define possible operator symbols
-operators = ['+', '-', '*', '/', '(', ')']
+operators = ["+", "-", "*", "/", "(", ")"]
 
 # TODO: Initialize frequency dictionary
-operator_counts = {}
+operator_counts = {op: expression.count(op) for op in operators}
 
-# TODO: Count operator occurrences
-for char in expression:
-    pass  # check if char in operators, update counts
 
 # TODO: Print results
 print("Operator counts:", operator_counts)
